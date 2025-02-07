@@ -40,7 +40,7 @@ Actúa como un intermediario, permitiendo que una aplicación solicite informaci
 Dirección específica donde se puede acceder a ciertos datos o realizar una operación en particular.
 
 - https://pokeapi.co/api/v2/pokemon/ditto
-- http://localhost:3300/user
+- http://localhost:3300/users
 
 #### Request
 
@@ -52,10 +52,10 @@ acompletar
 
 #### Métodos HTTP
 
-GET
-POST
-PUT
-DELETE
+- GET
+- POST
+- PUT
+- DELETE
 
 ### Consumo de API
 
