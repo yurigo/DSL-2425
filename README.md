@@ -1,6 +1,6 @@
 # DSL-2425
 
-## Node & mdn
+## Node & npm
 
 ## Javascript (ECMA16)
 
