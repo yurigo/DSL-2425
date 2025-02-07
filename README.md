@@ -61,10 +61,10 @@ acompletar
 
 #### Herramientas para hacer peticiones
 
-curl
-Browser para hacer GET (por defecto)
-Postman
-Thunder Client
+- curl
+- Browser para hacer GET (por defecto)
+- Postman
+- Thunder Client
 
 #### Autenticación y autorización
 
