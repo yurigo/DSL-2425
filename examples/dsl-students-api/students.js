@@ -1,37 +1,37 @@
 export const students = [
     {
         id: 1,
-        name: "Yuri",
-        lastname: "Gonzalez",
+        name: "Alice",
+        lastname: "Doe",
     },
     {
         id: 2,
-        name: "Pau",
-        lastname: "Llort",
+        name: "Bob",
+        lastname: "Doe",
     },
     {
-        name: "Marc",
-        lastname: "Marzà",
+        name: "Charlie",
+        lastname: "Doe",
         id: 3,
     },
     {
         id: 4,
-        lastname: "Barberà",
-        name: "Marc",
+        lastname: "Doe",
+        name: "Dave",
     },
     {
         id: 5,
-        name: "Joan",
-        lastname: "Medina",
+        name: "Eevee",
+        lastname: "Doe",
     },
     {
         id: 7,
         name: "Lorem",
-        lastname: "Ipsum",
+        lastname: "Doe",
     },
     {
         id: 6,
-        name: "Max",
-        lastname: "Nuñez",
+        name: "Francis",
+        lastname: "Doe",
     }
 ]
