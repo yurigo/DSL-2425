@@ -1,8 +1,6 @@
 import chalk from 'chalk';
 import express from 'express';
 
-import { pokemons } from './pokemons.js';
-
 // console.log(chalk.blue('Hello world!'));
 // console.log(chalk.bgGreen.greenBright('Hello world!'));
 // console.log(chalk.red('Hello world!'));
@@ -30,21 +28,6 @@ app.get('/', (req, res) => {
 
 app.get('/ping', (req, res) => {
     res.send("pong");
-})
-
-app.get('/pokemon', (req, res) => {
-    res.json(pokemons);
-})
-
-app.get('/pokemon/:ID', (req, res) => {
-
-    const id = parseInt(req.params.ID);
-
-    const pokemon = pokemons.find((elem) => {
-        return (elem.id === id)
-    })
-
-    res.json(pokemon)
 })
 
 app.listen(port, () => {
