@@ -1,7 +1,19 @@
-# Ejercicio 1
+# Ejercicio 2
 
-Crea una API REST donde podremos realizar varias peticiones:
+Crea una API REST donde podremos realizar una petición por cada número del 1 al 99 y devuelva la tabla de multiplicar del número correspondiente.
 
-Una petición para obtener la fecha actual en milisegundos.
-Otra petición para obtener la fecha actual en formato dd-MM-yyyy.
-Y otra petición para obtener la hora actual en formato hh:mm:ss
+## Request
+```
+GET /9
+```
+
+## Response
+```
+{
+    "1x9" : 9,
+    "2x9" : 18,
+    "3x9" : 27,
+    "4x9" : 36,
+    ...
+}
+```
