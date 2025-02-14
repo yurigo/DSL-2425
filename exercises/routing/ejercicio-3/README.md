@@ -1,7 +1,17 @@
-# Ejercicio 1
+# Ejercicio 3
 
-Crea una API REST donde podremos realizar varias peticiones:
+El factorial de un número entero `n` es una operación matemática que consiste en multiplicar todos los factores `n * (n-1) * (n-2) * … * 1`. Así, el factorial de 5 (escrito como 5!) es igual a: `5! = 5 * 4 * 3 * 2 * 1 = 120`.
 
-Una petición para obtener la fecha actual en milisegundos.
-Otra petición para obtener la fecha actual en formato dd-MM-yyyy.
-Y otra petición para obtener la hora actual en formato hh:mm:ss
+## Request
+
+```
+GET /5
+```
+
+## Response
+
+```
+{
+    "result": 120
+}
+```
