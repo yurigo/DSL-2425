@@ -198,3 +198,75 @@ Crea una API REST que reciba una frase como parámetro en la URL y devuelva un a
 
 La ruta recibirá como parámetros en la URL la longitud de la contraseña y si debe incluir números y caracteres especiales.
 La API devolverá una contraseña aleatoria con las características solicitadas.
+
+
+### Middleware
+
+- https://expressjs.com/en/guide/writing-middleware.html
+- https://expressjs.com/en/guide/using-middleware.html
+
+#### Route middleware
+
+#### Router middleware
+
+#### Application middleware
+
+#### Error middleware
+
+#### Ejercicios
+
+##### Ejercicio 01
+Crea una API REST donde podremos realizar una petición para obtener un número aleatorio del 1 a un número recibido por parámetro.
+
+Comprueba que el número recibido por parámetro sea superior o igual a 1, usando un middleware.
+
+##### Ejercicio 02
+Crea una API REST donde podremos realizar una petición para obtener la siguiente combinación de números, multiplicada por un número enviado por el body y con el método PUT.
+
+```
+[2,4,8,9,7,3,5,6]
+```
+
+Para poder acceder a esta petición, se debe comprobar a través de un middleware que el usuario envía en la petición el string “mi-credencial”. Si no lo envía, no se podrá enviar la combinación de números.
+
+##### Ejercicio 03: Comprobación de tipo de dato en el cuerpo de la solicitud (Body Validation)
+
+Crea una API REST que reciba una petición POST con un cuerpo que contenga un objeto JSON. Este objeto debe tener las propiedades nombre (de tipo string) y edad (de tipo número).
+
+Asegúrate de que:
+
+El campo nombre sea de tipo string y no esté vacío.
+El campo edad sea un número entero positivo mayor que 0.
+Si alguno de estos requisitos no se cumple, devuelve un mensaje de error y un código de estado adecuado usando un middleware.
+
+##### Ejercicio 04: Limitar las peticiones (Rate Limiting)
+
+Crea una API REST que permita realizar peticiones a una ruta para obtener la hora actual. Para evitar abusos, implementa un middleware que limite a un máximo de 5 peticiones por minuto por dirección IP.
+
+##### Ejercicio 05: Middleware para logueo de peticiones (Logging)
+
+Crea una API REST donde cada vez que se haga una petición a cualquier ruta, se registre en la consola la información sobre la solicitud (método HTTP, ruta, y la fecha y hora).
+
+Este middleware debería ser aplicable a todas las rutas, y deberá imprimirse cada vez que se haga una solicitud, independientemente de la ruta que sea.
+
+##### Ejercicio 06: Middleware para verificar si el usuario está autenticado (Authentication)
+
+Crea una API REST con una ruta protegida que devuelva información sensible, como un perfil de usuario. Antes de acceder a esa ruta, debes verificar si el usuario está autenticado. La autenticación se puede simular con un token enviado en los encabezados de la petición. Si no se incluye un token válido, la API debe responder con un mensaje de error.
+
+Usa un middleware para esta verificación.
+
+##### Ejercicio 07: Middleware para transformar la respuesta de la API (Response Transformation)
+
+Crea una API REST que devuelva un objeto con información de usuario (por ejemplo, nombre, edad y país). Luego, crea un middleware que transforme la respuesta antes de enviarla al cliente. La transformación consiste en agregar un campo extra, como timestamp, que sea la fecha y hora en que se generó la respuesta.
+
+##### Ejercicio 08: Contador de visitas por ruta
+
+Crea una API REST con diferentes rutas. Crea un middleware que cuente cuántas veces se ha accedido a cada ruta y almacene ese contador en memoria. Al final de cada solicitud, muestra en la consola el número total de visitas a esa ruta.  Habilita, también una ruta `visitas` que devuelva un json con el listado de los endpoint y el número de visitas. 
+
+##### Ejercicio 09: Comprobación de headers personalizados
+
+Crea una API REST que solo permita peticiones que incluyan un encabezado personalizado x-api-key. Si la petición no incluye este encabezado o el valor del encabezado no coincide con una clave predefinida, la API debe devolver un mensaje de error con el código de estado adecuado.
+
+##### Ejercicio 10: Middleware de validación de parámetros numéricos
+
+Crea una API REST donde puedas realizar una petición GET con parámetros de la URL como num1 y num2, que sean números enteros. Antes de procesar la solicitud, usa un middleware que valide que ambos parámetros son números enteros. Si alguno de ellos no es válido, devuelve un error.
