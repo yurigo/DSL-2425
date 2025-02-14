@@ -270,6 +270,8 @@ Crea una API REST que devuelva un objeto con información de usuario (por ejempl
 
 Crea una API REST con diferentes rutas. Crea un middleware que cuente cuántas veces se ha accedido a cada ruta y almacene ese contador en memoria. Al final de cada solicitud, muestra en la consola el número total de visitas a esa ruta.  Habilita, también una ruta `visitas` que devuelva un json con el listado de los endpoint y el número de visitas. 
 
+> [Ver solución](./exercises/middleware/ejercicio-8)
+
 ##### Ejercicio 09: Comprobación de headers personalizados
 
 Crea una API REST que solo permita peticiones que incluyan un encabezado personalizado x-api-key. Si la petición no incluye este encabezado o el valor del encabezado no coincide con una clave predefinida, la API debe devolver un mensaje de error con el código de estado adecuado.
