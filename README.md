@@ -154,11 +154,18 @@ Crea una API REST donde podremos realizar varias peticiones:
 - Otra petición para obtener la fecha actual en formato `dd-MM-yyyy`.
 - Y otra petición para obtener la hora actual en formato `hh:mm:ss`
 
+> - [ver solucion](./exercises/routing/ejercicio-1)
+> - [ver solucion alternativa](./exercises/routing/ejercicio-1-momentjs)
+
 ##### Ejercicio 02
 Crea una API REST donde podremos realizar una petición por cada número del 1 al 99 y devuelva la tabla de multiplicar del número correspondiente.
 
+> - [ver solucion](./exercises/routing/ejercicio-2)
+
 ##### Ejercicio 03
 El factorial de un número entero `n` es una operación matemática que consiste en multiplicar todos los factores `n * (n-1) * (n-2) * … * 1`. Así, el factorial de 5 (escrito como 5!) es igual a: `5! = 5 * 4 * 3 * 2 * 1 = 120`.
+
+> - [ver solucion](./exercises/routing/ejercicio-3)
 
 Crea una API REST donde el usuario podrá enviar por parámetro GET, después de la URL, un número y devuelva el factorial de ese número.
 
