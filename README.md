@@ -244,9 +244,9 @@ Crea una API REST que reciba una petición POST con un cuerpo que contenga un ob
 
 Asegúrate de que:
 
-El campo nombre sea de tipo string y no esté vacío.
-El campo edad sea un número entero positivo mayor que 0.
-Si alguno de estos requisitos no se cumple, devuelve un mensaje de error y un código de estado adecuado usando un middleware.
+- El campo nombre sea de tipo string y no esté vacío.
+- El campo edad sea un número entero positivo mayor que 0.
+- Si alguno de estos requisitos no se cumple, devuelve un mensaje de error y un código de estado adecuado usando un middleware.
 
 > [!TIP]
 > - [Ver solución (con joi)](./exercises/middleware/ejercicio-3-joi)
