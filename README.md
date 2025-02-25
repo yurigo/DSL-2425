@@ -248,9 +248,16 @@ El campo nombre sea de tipo string y no esté vacío.
 El campo edad sea un número entero positivo mayor que 0.
 Si alguno de estos requisitos no se cumple, devuelve un mensaje de error y un código de estado adecuado usando un middleware.
 
+> [!TIP]
+> - [Ver solución (con joi)](./exercises/middleware/ejercicio-3-joi)
+
 ##### Ejercicio 04: Limitar las peticiones (Rate Limiting)
 
 Crea una API REST que permita realizar peticiones a una ruta para obtener la hora actual. Para evitar abusos, implementa un middleware que limite a un máximo de 5 peticiones por minuto por dirección IP.
+
+> [!TIP]
+> - [Ver solución](./exercises/middleware/ejercicio-4)
+> - [Ver solución (con express-rate-limit)](./exercises/middleware/ejercicio-4-express-rate-limit)
 
 ##### Ejercicio 05: Middleware para logueo de peticiones (Logging)
 
