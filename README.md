@@ -154,6 +154,7 @@ Crea una API REST donde podremos realizar varias peticiones:
 - Otra petición para obtener la fecha actual en formato `dd-MM-yyyy`.
 - Y otra petición para obtener la hora actual en formato `hh:mm:ss`
 
+> [!TIP]
 > - [ver solucion](./exercises/routing/ejercicio-1)
 > - [ver solucion alternativa](./exercises/routing/ejercicio-1-momentjs)
 
@@ -165,6 +166,7 @@ Crea una API REST donde podremos realizar una petición por cada número del 1 a
 ##### Ejercicio 03
 El factorial de un número entero `n` es una operación matemática que consiste en multiplicar todos los factores `n * (n-1) * (n-2) * … * 1`. Así, el factorial de 5 (escrito como 5!) es igual a: `5! = 5 * 4 * 3 * 2 * 1 = 120`.
 
+> [!TIP]
 > - [ver solucion](./exercises/routing/ejercicio-3)
 
 Crea una API REST donde el usuario podrá enviar por parámetro GET, después de la URL, un número y devuelva el factorial de ese número.
@@ -270,14 +272,16 @@ Crea una API REST que devuelva un objeto con información de usuario (por ejempl
 
 Crea una API REST con diferentes rutas. Crea un middleware que cuente cuántas veces se ha accedido a cada ruta y almacene ese contador en memoria. Al final de cada solicitud, muestra en la consola el número total de visitas a esa ruta.  Habilita, también una ruta `visitas` que devuelva un json con el listado de los endpoint y el número de visitas. 
 
-> [Ver solución](./exercises/middleware/ejercicio-8)
+> [!TIP]
+> - [Ver solución](./exercises/middleware/ejercicio-8)
 
 ##### Ejercicio 09: Comprobación de headers personalizados
 
 Crea una API REST que solo permita peticiones que incluyan un encabezado personalizado x-api-key. Si la petición no incluye este encabezado o el valor del encabezado no coincide con una clave predefinida, la API debe devolver un mensaje de error con el código de estado adecuado.
 
-> [Ver solución](./exercises/middleware/ejercicio-9)
-> [Ver solución (con joi)](./exercises/middleware/ejercicio-9-joi)
+> [!TIP]
+> - [Ver solución](./exercises/middleware/ejercicio-9)
+> - [Ver solución (con joi)](./exercises/middleware/ejercicio-9-joi)
 
 ##### Ejercicio 10: Middleware de validación de parámetros numéricos
 
