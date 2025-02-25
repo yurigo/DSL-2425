@@ -279,10 +279,10 @@ Crea una API REST con diferentes rutas. Crea un middleware que cuente cuántas v
 
 Crea una API REST que solo permita peticiones que incluyan un encabezado personalizado x-api-key. Si la petición no incluye este encabezado o el valor del encabezado no coincide con una clave predefinida, la API debe devolver un mensaje de error con el código de estado adecuado.
 
-> [!TIP]
-> - [Ver solución](./exercises/middleware/ejercicio-10)
-> - [Ver solución (con joi)](./exercises/middleware/ejercicio-10-joi)
-
 ##### Ejercicio 10: Middleware de validación de parámetros numéricos
 
 Crea una API REST donde puedas realizar una petición GET con parámetros de la URL como num1 y num2, que sean números enteros. Antes de procesar la solicitud, usa un middleware que valide que ambos parámetros son números enteros. Si alguno de ellos no es válido, devuelve un error.
+
+> [!TIP]
+> - [Ver solución](./exercises/middleware/ejercicio-10)
+> - [Ver solución (con joi)](./exercises/middleware/ejercicio-10-joi)
