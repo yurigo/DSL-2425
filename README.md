@@ -155,23 +155,28 @@ Crea una API REST donde podremos realizar varias peticiones:
 - Y otra petición para obtener la hora actual en formato `hh:mm:ss`
 
 > [!TIP]
+>
 > - [ver solucion](./exercises/routing/ejercicio-1)
 > - [ver solucion alternativa](./exercises/routing/ejercicio-1-momentjs)
 
 ##### Ejercicio 02
+
 Crea una API REST donde podremos realizar una petición por cada número del 1 al 99 y devuelva la tabla de multiplicar del número correspondiente.
 
 > - [ver solucion](./exercises/routing/ejercicio-2)
 
 ##### Ejercicio 03
+
 El factorial de un número entero `n` es una operación matemática que consiste en multiplicar todos los factores `n * (n-1) * (n-2) * … * 1`. Así, el factorial de 5 (escrito como 5!) es igual a: `5! = 5 * 4 * 3 * 2 * 1 = 120`.
 
 > [!TIP]
+>
 > - [ver solucion](./exercises/routing/ejercicio-3)
 
 Crea una API REST donde el usuario podrá enviar por parámetro GET, después de la URL, un número y devuelva el factorial de ese número.
 
 ##### Ejercicio 04
+
 Crea una API REST donde podremos realizar una sola petición para realizar las operaciones de suma, resta, multiplicación y división.
 
 En la petición, deberemos enviar por parámetro (dentro de la URL) la operación a realizar, por el body de la petición enviaremos 2 números, y se debe enviar usando el método POST.
@@ -179,24 +184,30 @@ En la petición, deberemos enviar por parámetro (dentro de la URL) la operació
 Ten en cuenta que, si el divisor de la división es 0, no se podrá dividir y el servidor debe mostrar un mensaje de error con el estado 422 (“Unprocessable Entity”), que significa que el servidor entiende la petición, pero no puede procesar las instrucciones que recibe.
 
 ##### Ejercicio 05
+
 Crea una API REST que permita convertir temperaturas:
 
 Una ruta recibirá una temperatura en grados Celsius como parámetro en la URL y devolverá su equivalente en Fahrenheit y Kelvin.
 Otra ruta recibirá una temperatura en grados Fahrenheit y devolverá su equivalente en Celsius y Kelvin.
 
 ##### Ejercicio 06
+
 Crea una API REST que reciba un número entero como parámetro en la URL y devuelva si es un número primo o no.
 
 ##### Ejercicio 07
+
 Crea una API REST que reciba una palabra como parámetro en la URL y devuelva si es un palíndromo (se lee igual al derecho y al revés).
 
 ##### Ejercicio 08
+
 Crea una API REST que reciba un número como parámetro en la URL y devuelva su representación en número romano.
 
 ##### Ejercicio 09
+
 Crea una API REST que permita generar contraseñas aleatorias.
 
 ##### Ejercicio 10
+
 Crea una API REST que reciba una frase como parámetro en la URL y devuelva un análisis de la misma, incluyendo:
 
 - Número de palabras
@@ -204,10 +215,8 @@ Crea una API REST que reciba una frase como parámetro en la URL y devuelva un a
 - Número de vocales y consonantes
 - La palabra más larga
 
-
 La ruta recibirá como parámetros en la URL la longitud de la contraseña y si debe incluir números y caracteres especiales.
 La API devolverá una contraseña aleatoria con las características solicitadas.
-
 
 ### Middleware
 
@@ -225,11 +234,13 @@ La API devolverá una contraseña aleatoria con las características solicitadas
 #### Ejercicios
 
 ##### Ejercicio 01
+
 Crea una API REST donde podremos realizar una petición para obtener un número aleatorio del 1 a un número recibido por parámetro.
 
 Comprueba que el número recibido por parámetro sea superior o igual a 1, usando un middleware.
 
 ##### Ejercicio 02
+
 Crea una API REST donde podremos realizar una petición para obtener la siguiente combinación de números, multiplicada por un número enviado por el body y con el método PUT.
 
 ```
@@ -249,6 +260,7 @@ Asegúrate de que:
 - Si alguno de estos requisitos no se cumple, devuelve un mensaje de error y un código de estado adecuado usando un middleware.
 
 > [!TIP]
+>
 > - [Ver solución (con joi)](./exercises/middleware/ejercicio-3-joi)
 
 ##### Ejercicio 04: Limitar las peticiones (Rate Limiting)
@@ -256,6 +268,7 @@ Asegúrate de que:
 Crea una API REST que permita realizar peticiones a una ruta para obtener la hora actual. Para evitar abusos, implementa un middleware que limite a un máximo de 5 peticiones por minuto por dirección IP.
 
 > [!TIP]
+>
 > - [Ver solución](./exercises/middleware/ejercicio-4)
 > - [Ver solución (con express-rate-limit)](./exercises/middleware/ejercicio-4-express-rate-limit)
 
@@ -277,9 +290,10 @@ Crea una API REST que devuelva un objeto con información de usuario (por ejempl
 
 ##### Ejercicio 08: Contador de visitas por ruta
 
-Crea una API REST con diferentes rutas. Crea un middleware que cuente cuántas veces se ha accedido a cada ruta y almacene ese contador en memoria. Al final de cada solicitud, muestra en la consola el número total de visitas a esa ruta.  Habilita, también una ruta `visitas` que devuelva un json con el listado de los endpoint y el número de visitas. 
+Crea una API REST con diferentes rutas. Crea un middleware que cuente cuántas veces se ha accedido a cada ruta y almacene ese contador en memoria. Al final de cada solicitud, muestra en la consola el número total de visitas a esa ruta. Habilita, también una ruta `visitas` que devuelva un json con el listado de los endpoint y el número de visitas.
 
 > [!TIP]
+>
 > - [Ver solución](./exercises/middleware/ejercicio-8)
 
 ##### Ejercicio 09: Comprobación de headers personalizados
@@ -291,5 +305,64 @@ Crea una API REST que solo permita peticiones que incluyan un encabezado persona
 Crea una API REST donde puedas realizar una petición GET con parámetros de la URL como num1 y num2, que sean números enteros. Antes de procesar la solicitud, usa un middleware que valide que ambos parámetros son números enteros. Si alguno de ellos no es válido, devuelve un error.
 
 > [!TIP]
+>
 > - [Ver solución](./exercises/middleware/ejercicio-10)
 > - [Ver solución (con joi)](./exercises/middleware/ejercicio-10-joi)
+
+---
+
+#### Ejercicios
+
+##### Ejercicio 01: API de Generación de QR con Datos Dinámicos
+
+Crea una API REST que genere códigos QR con diferentes tipos de contenido dinámico.
+
+- Una ruta GET /qr?data=texto devolverá un QR con el texto recibido.
+- Una ruta GET /qr?url=https://ejemplo.com generará un QR con el enlace recibido.
+- Usa una librería como [qrcode](https://www.npmjs.com/package/qrcode) para generar las imágenes.
+- Implementa un middleware que valide que los datos enviados son válidos (texto o URL).
+
+###### Ejercicio 02: API de chistes
+
+Diseña e implementa una API REST que te de un chiste aleatorio cada vez que se hace una solicitud.
+Los chistes están organizados por categorías (programación, animales, tecnología, etc.).
+
+```json
+[
+  {
+    "id": 1,
+    "chiste": "¿Por qué los programadores confunden Halloween con Navidad? \n -Porque Oct 31 == Dec 25.",
+    "categoria": "Programadores",
+    "likes": 65
+  },
+  {
+    "id": 2,
+    "chiste": "¿Qué es un terapeuta? \n - 1024 gigapeutas",
+    "categoria": "Programadores",
+    "likes": 3
+  },
+  {
+    "id": 3,
+    "chiste": "Existen 10 tipos de personas. Las que entienden binario y las que no",
+    "categoria": "Programadores",
+    "likes": 1
+  },
+  {
+    "id": 4,
+    "chiste": "Que le puedes que dar a una persona que tiene de todo? \n - Penicilina",
+    "categoria": "Medicina",
+    "likes": 123
+  }
+]
+```
+
+La api debe permitir:
+
+- Mostrar todos los chistes
+- Mostrar un chiste aleatorio.
+- (Dado un identificador) se pueda acceder al chiste en cuestion.
+- Mostrar todos los chistes según una categoría.
+- Mostrar un chiste aleatorio según una categoría.
+- Dar un like un chiste en cuestión.
+- Añadir un chiste nuevo (a partir de un chiste y una categoría)
+- Borrar un chiste (a partir de su identificador).
