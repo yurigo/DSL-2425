@@ -366,3 +366,15 @@ La api debe permitir:
 - Dar un like un chiste en cuestión.
 - Añadir un chiste nuevo (a partir de un chiste y una categoría)
 - Borrar un chiste (a partir de su identificador).
+
+## Javascript
+
+### Promesas
+
+[promises](./examples/promises/promises.js)
+
+## Persistencia
+
+### SQLite
+
+[ejemplo](./examples/inventory/)
