@@ -387,4 +387,4 @@ Este endpoint muestra la colección de todos del usuario ID.
 
 #### Ejemplo
 
-![user-todos-api](./examples/users-todos-api)
+[user-todos-api](./examples/users-todos-api)
