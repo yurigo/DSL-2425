@@ -378,3 +378,13 @@ La api debe permitir:
 ### SQLite
 
 [ejemplo](./examples/inventory/)
+
+### Colecciones API REST
+
+`GET /user/ID/todos`
+
+Este endpoint muestra la colección de todos del usuario ID.
+
+#### Ejemplo
+
+![user-todos-api](./examples/users-todos-api)
