@@ -371,7 +371,9 @@ La api debe permitir:
 
 ### Promesas
 
-[promises](./examples/promises/promises.js)
+> [!NOTE]
+> - [yurigo/javascript#promesas](https://github.com/yurigo/javascript?tab=readme-ov-file#promesas-)
+> - [examples](./examples/promises/promises.js)
 
 ## Persistencia
 
@@ -388,3 +390,90 @@ Este endpoint muestra la colección de todos del usuario ID.
 #### Ejemplo
 
 [user-todos-api](./examples/users-todos-api)
+
+---
+
+### Autenticación y Autorización
+
+**Autenticacion**: Acto de identificar a un usuario o un dispositivo.
+ 
+**Autenticacion**: Acto de permitir o denegar a los usuarios y dispositivos los derechos de acceso
+
+#### HTTP authentication (📚)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication]
+
+#### Errores
+
+- (401)[https://http.cat/401]
+- (403)[https://http.cat/403]
+- (407)[https://http.cat/407]
+
+#### Tipos
+
+- Basic
+- Bearer
+- Digest
+- HOBA
+- Mutual
+- Negotiate / NTLM
+- VAPID
+- SCRAM
+- AWS4-HMAC-SHA256
+
+##### Basic
+
+La autenticación básica es un esquema de autenticación muy simple que está integrado en el protocolo HTTP. El cliente envía solicitudes HTTP con el encabezado de Autorización que contiene la palabra Basic seguida de un espacio y una cadena de nombre de `usuario:contraseña` codificada en base64. Por ejemplo, un encabezado que contenga las credenciales `demo` / `p@55w0rd` se codificaría como:
+
+```bash
+Authorization: Basic ZGVtbzpwQDU1dzByZA==
+```
+
+> [!IMPORTANT]
+> Debido a que base64 se puede decodificar fácilmente, la autenticación básica solo debe usarse junto con otros mecanismos de seguridad como HTTPS/SSL.
+
+> [!NOTE]
+> [ver código de ejemplo (node/express)](./examples/authorization/basic/example.js)
+
+##### Bearer
+
+El esquema de Bearer es otro mecanismo de autenticación que se utiliza comúnmente con tokens de acceso, generalmente en el contexto de OAuth 2.0. En lugar de usar un nombre de usuario y una contraseña codificados, el cliente utiliza un token de acceso en el encabezado de la solicitud HTTP.
+
+El formato del encabezado de autorización se ve de la siguiente manera:
+
+```
+Authorization: Bearer <token>
+```
+El `<token>` es un valor que representa la autorización que el cliente tiene para acceder a ciertos recursos en el servidor, y usualmente se obtiene luego de un proceso de autenticación. Los tokens suelen tener un tiempo de expiración y son más seguros que la autenticación básica porque no involucran el uso directo de contraseñas en las solicitudes.
+
+Ejemplo de encabezado de autorización con un token Bearer:
+
+```
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+###### JWT
+
+Un token Bearer es típicamente un JWT (JSON Web Token), como el que se ve en el ejemplo anterior. 
+
+Está compuesto por tres partes separadas por puntos:
+
+**Encabezado** (_Header_): Contiene información sobre cómo está codificado el token, como el algoritmo de firma (por ejemplo, HS256).
+**Cuerpo** (_Payload_): Contiene los datos del token, como la identidad del usuario o información sobre los permisos de acceso.
+**Firma** (_Signature_): Se utiliza para verificar que el token no haya sido alterado.
+
+La autenticación Bearer se usa frecuentemente con protocolos como OAuth 2.0, donde se asigna un token de acceso al usuario tras un proceso de autenticación, y el cliente usa ese token para hacer solicitudes a un servidor sin necesidad de enviar las credenciales cada vez.
+
+> [!IMPORTANT]
+> Aunque el uso de tokens Bearer es más seguro que Basic Authentication, es fundamental usar HTTPS para garantizar que el token no sea interceptado por atacantes en la red.
+
+> [!NOTE]
+> [ver código de ejemplo (node/express)](./examples/authorization/basic/example.js)
+
+#### Persistencia
+
+> [!CAUTION]
+> NO guardar los passwords en una base de datos.
+
+> [!IMPORTANT]
+> Usar Bcrypt para encriptar el password y guardar el hash en la base de datos.
+
+
