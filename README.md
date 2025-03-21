@@ -393,6 +393,18 @@ Este endpoint muestra la colección de todos del usuario ID.
 
 ---
 
+### Securización
+
+1. Autenticación y autorización.
+2. Comunicación segura.
+3. Data Validation y sanitización.
+4. Rate Limit y throttling.
+5. Manejo de errores y Logging.
+6. Almacenamiento seguro de credenciales y secretos.
+7. Auditorias de seguridad y Testing.
+
+
+
 ### Autenticación y Autorización
 
 **Autenticacion**: Acto de identificar a un usuario o un dispositivo.
@@ -401,13 +413,13 @@ Este endpoint muestra la colección de todos del usuario ID.
 
 #### HTTP authentication (📚)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication]
 
-#### Errores
+##### Errores
 
 - (401)[https://http.cat/401]
 - (403)[https://http.cat/403]
 - (407)[https://http.cat/407]
 
-#### Tipos
+##### Tipos
 
 - Basic
 - Bearer
@@ -419,7 +431,7 @@ Este endpoint muestra la colección de todos del usuario ID.
 - SCRAM
 - AWS4-HMAC-SHA256
 
-##### Basic
+###### Basic
 
 La autenticación básica es un esquema de autenticación muy simple que está integrado en el protocolo HTTP. El cliente envía solicitudes HTTP con el encabezado de Autorización que contiene la palabra Basic seguida de un espacio y una cadena de nombre de `usuario:contraseña` codificada en base64. Por ejemplo, un encabezado que contenga las credenciales `demo` / `p@55w0rd` se codificaría como:
 
@@ -433,7 +445,7 @@ Authorization: Basic ZGVtbzpwQDU1dzByZA==
 > [!NOTE]
 > [ver código de ejemplo (node/express)](./examples/authorization/basic/example.js)
 
-##### Bearer
+###### Bearer
 
 El esquema de Bearer es otro mecanismo de autenticación que se utiliza comúnmente con tokens de acceso, generalmente en el contexto de OAuth 2.0. En lugar de usar un nombre de usuario y una contraseña codificados, el cliente utiliza un token de acceso en el encabezado de la solicitud HTTP.
 
@@ -468,12 +480,72 @@ La autenticación Bearer se usa frecuentemente con protocolos como OAuth 2.0, do
 > [!NOTE]
 > [ver código de ejemplo (node/express)](./examples/authorization/basic/example.js)
 
-#### Persistencia
+#### ApiKey authentication
+
+Similar a la Bearer authentication con la diferencia que no se usa la cabecera HTTP authentication.  Se pasa la apikey por otra cabecera, `XXX-apikey` o se transmite a través de la url cómo search parámeter: `lorem.ipsum.com/api/?key=zaq12wsxcde34rfvbgt56yhnmju78ik`
+
+### Comunicación segura
+
+Proteger el canal de comunicación usando **HTTPS/SSL/TLS** para encriptar los datos en transito.
+
+Deshabilitar protocolos de comunicación insegura como HTTP. para reforzar las conexiones seguras.
+
+### Data validation y sanitización
+
+Validar y sanitizar todos los datos y parámetros de entrada para prevenir ataques de inyección, tales como SQL injection o cross-site scripting (XSS).
+
+Implementar validación de la entrada de datos para asegurara la integridad de los datos.
+
+> [!NOTE]
+> [joi](https://www.npmjs.com/package/joi)
+
+### Rate limit
+
+Implementar limites para controlar el número de peticiones de un cliente durante una ventana de tiempo. De este modo se evitan abusos y ataques DDoS.
+
+> [!NOTE]
+> [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
+
+### Manejo de errores y Logging
+
+Implementa mecanismos de control y recuperación de errores seguros para evitar exponer información sensible en respuestas de error.
+
+Habilita un logging detallado de la actividad del servicio y monitoriza los logs para identificar posibles incidentes de seguridad o casos anormales.
+
+#### Manejo de errores
+
+[Express Error Handling](https://expressjs.com/en/guide/error-handling.html)
+
+#### Logging
+
+[morgan](https://www.npmjs.com/package/morgan)
+
+
+### Almacenamiento seguro de credenciales y secretos
+
+Almacena credenciales y apikeys utilizando un sistema de almacenamiento seguro.
+
+Evita harcodear credenciales en el código fuente para evitar prevenir exposición de credenciales accidentales
+
+#### Almacenamiento seguro de credenciales
 
 > [!CAUTION]
 > NO guardar los passwords en una base de datos.
 
 > [!IMPORTANT]
-> Usar Bcrypt para encriptar el password y guardar el hash en la base de datos.
+> Encriptar el password y guardar el hash en la base de datos.
+
+> [!NOTE]
+> [bcrypt](https://www.npmjs.com/package/bcrypt)
+> [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 
 
+#### Almacenamiento seguro de secretos
+
+> [!NOTE]
+> [.env](https://www.npmjs.com/package/dotenv)
+
+### Auditorias de seguridad y testing
+
+> [!NOTE]
+> [helmet](https://www.npmjs.com/package/helmet)
