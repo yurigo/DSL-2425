@@ -407,17 +407,17 @@ Este endpoint muestra la colección de todos del usuario ID.
 
 ### Autenticación y Autorización
 
-**Autenticacion**: Acto de identificar a un usuario o un dispositivo.
+**Autenticación**: Acto de identificar a un usuario o un dispositivo.
  
-**Autenticacion**: Acto de permitir o denegar a los usuarios y dispositivos los derechos de acceso
+**Autorización**: Acto de permitir o denegar a los usuarios y dispositivos los derechos de acceso
 
-#### HTTP authentication (📚)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication]
+#### HTTP authentication [📚](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication)
 
 ##### Errores
 
-- (401)[https://http.cat/401]
-- (403)[https://http.cat/403]
-- (407)[https://http.cat/407]
+- [401](https://http.cat/401)
+- [403](https://http.cat/403)
+- [407](https://http.cat/407)
 
 ##### Tipos
 
