@@ -22,11 +22,11 @@ const authenticateJWT = (req, res, next) => {
     return res.status(403).json({ message: 'Token is required' });
   }
 
-  jwt.verify(token, SECRET_KEY, (err, user) => {
+  jwt.verify(token, SECRET_KEY, (err, payload) => {
     if (err) {
       return res.status(403).json({ message: 'Invalid or expired token' });
     }
-    req.user = user;
+    req.user = payload;
     next();
   });
 };
