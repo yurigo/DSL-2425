@@ -478,7 +478,7 @@ La autenticación Bearer se usa frecuentemente con protocolos como OAuth 2.0, do
 > Aunque el uso de tokens Bearer es más seguro que Basic Authentication, es fundamental usar HTTPS para garantizar que el token no sea interceptado por atacantes en la red.
 
 > [!NOTE]
-> [ver código de ejemplo (node/express)](./examples/authorization/basic/example.js)
+> [ver código de ejemplo (node/express)](./examples/authorization/bearer/example.js)
 
 #### ApiKey authentication
 
