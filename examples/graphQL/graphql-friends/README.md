@@ -38,6 +38,6 @@ npm run dev
 
 Se ha utilizado un boilerplate[^1] básico.
 Se ha implementado las dependencias mínimas de graphql: `graphql` y `graphql-http`.
-Se han implementado typedefs y resolvers sin `@graphql-tools/schema`. [(Ver versión con `@graphql-tools/schema`)](https://github.com/yurigo/DSL-2425/tree/master/examples/graphql/graphql-friends-with-tools)
+Se han implementado typedefs y resolvers sin `@graphql-tools/schema`. [(Ver versión con `@graphql-tools/schema`)](https://github.com/yurigo/DSL-2425/tree/master/examples/graphQL/graphql-friends-with-tools)
 
 [^1]: https://www.graphql-js.org/docs/running-an-express-graphql-server/.
