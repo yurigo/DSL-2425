@@ -1,0 +1,143 @@
+openapi: '3.0.4'
+info:
+  title: Users API
+  version: '1.0'
+servers:
+  - url: http://localhost:4000
+tags:
+  - name: Users
+    description: everything about your Users
+
+paths:
+  /users:
+    get:
+      tags:
+        - Users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    age:
+                      type: integer
+                    friends:
+                      type: array
+                      items:
+                        type: integer
+                  required:
+                    - id
+                    - name
+                    - age
+                    - friends
+    post:
+      tags:
+        - Users
+
+
+      requestBody:
+        description: Inserts an existent user
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                age:
+                  type: integer
+                  minimum: 0
+                  maximum: 199
+                friends:
+                  type: array
+                  items:
+                    type: integer
+              required:
+                - name
+                - age
+                - friends
+      responses:
+        '201':
+          description: inserts a user
+  /users/{id}:
+    get:
+
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          description: id of the users to edit
+          required: true
+          schema:
+            type: integer
+            format: int64
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    age:
+                      type: integer
+                    friends:
+                      type: array
+                      items:
+                        type: integer
+                  required:
+                    - id
+                    - name
+                    - age
+                    - friends
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          description: id of the users to edit
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: Updates an existent user
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                age:
+                  type: integer
+                  minimum: 0
+                  maximum: 199
+                friends:
+                  type: array
+                  items:
+                    type: integer
+      responses:
+        '204':
+          description: updates the user
+        '404':
+          description: user not found

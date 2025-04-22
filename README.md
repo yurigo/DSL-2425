@@ -549,3 +549,8 @@ Evita harcodear credenciales en el cÃ³digo fuente para evitar prevenir exposiciÃ
 
 > [!NOTE]
 > [helmet](https://www.npmjs.com/package/helmet)
+
+## OpenAPI
+
+> [!NOTE]
+> [see example](./examples/openapi-example/)
