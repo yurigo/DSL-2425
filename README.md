@@ -552,5 +552,7 @@ Evita harcodear credenciales en el código fuente para evitar prevenir exposici�
 
 ## OpenAPI
 
+OpenAPI es una especificación estándar para describir, consumir y visualizar APIs RESTful. Originalmente conocida como Swagger, OpenAPI permite a los desarrolladores documentar de manera clara y estructurada cómo interactuar con sus servicios web. A través de un archivo en formato JSON o YAML, OpenAPI detalla los endpoints de la API, los métodos HTTP disponibles (como GET, POST, PUT, DELETE), los parámetros de entrada, los tipos de respuesta y otros detalles esenciales para el uso de la API. Esta especificación facilita la creación de herramientas automáticas para generación de documentación, pruebas y generación de código cliente, promoviendo la interoperabilidad y simplificando la integración de servicios.
+
 > [!NOTE]
 > [see example](./examples/openapi-example/)
