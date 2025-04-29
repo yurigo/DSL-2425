@@ -5,7 +5,7 @@ Este proyecto consta de cliente y servidor.
 Se utiliza el cliente y el servidor de socket.io.
 
 > [!TIP]
-> (Ver en `yurigo/socket-io-example`)[https://github.com/yurigo/socket-io-example]
+> [Ver en `yurigo/socket-io-example`](https://github.com/yurigo/socket-io-example)
 
 <br>
 
